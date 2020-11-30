@@ -19,8 +19,7 @@ String fname = input.nextLine();
 PrintWriter pwrite = new PrintWriter(ostream, true);
 pwrite.println(fname);
 InputStream istream = s.getInputStream();
-Scanner cRead = new Scanner(new 
-InputStreamReader(istream));
+Scanner cRead = new Scanner(new InputStreamReader(istream));
 while(cRead.hasNext())
 System.out.println(cRead.nextLine());
 pwrite.close();
@@ -29,4 +28,7 @@ s.close();
 catch(Exception e)
 {
 e.printStackTrace();
-}}}}s
+}
+}
+}
+}
