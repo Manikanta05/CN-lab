@@ -8,10 +8,12 @@ int p = 0,q = 0;
 Scanner in=new Scanner(System.in);
 System.out.println("Enter the message to be encrypted: ");
 String message=in.nextLine();
-char[] msgA=message.toCharArray(); boolean check=false;
+char[] msgA=message.toCharArray(); 
+boolean check=false;
 while(!check)
 {
-System.out.println("Enter two prime numbers: "); p=in.nextInt();
+System.out.println("Enter two prime numbers: "); 
+p=in.nextInt();
 q=in.nextInt();
 if(checkPrime(p) && checkPrime(q)) check=true;
 }
@@ -25,7 +27,8 @@ e=i; break;
 }
 }
 System.out.println("The value of e: "+e); 
- System.out.println("Public key: ("+e+", "+n+")"); int d=0;
+ System.out.println("Public key: ("+e+", "+n+")"); 
+int d=0;
 for(d=2;d<z;d++)
 if((e*d)%z==1)
 break; System.out.println("d: "+d); int ch;
