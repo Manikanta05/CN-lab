@@ -37,8 +37,10 @@ for (int dn = 1; dn <= num_ver; dn++)
 if (A[sn][dn] != MAX_VALUE)
 {
 if (D[dn] > D[sn]+ A[sn][dn])
-{System.out.println("The Graph contains negative edge cycle");
- System.exit(0);}
+{
+System.out.println("The Graph contains negative edge cycle");
+System.exit(0);
+}
 }
 }
 }
@@ -54,7 +56,8 @@ public static void main(String[ ] args)
 {
 int num_ver = 0;
 int source;
-Scanner scanner = new Scanner(System.in); System.out.println("Enter the number of vertices"); 
+Scanner scanner = new Scanner(System.in);
+System.out.println("Enter the number of vertices"); 
 num_ver = scanner.nextInt();
 int A[][] = new int[num_ver + 1][num_ver + 1];
 System.out.println("Enter the adjacency matrix");
@@ -76,6 +79,8 @@ A[sn][dn] = MAX_VALUE;
 }
 System.out.println("Enter the source vertex");
 source = scanner.nextInt();
-Main b = new Main (num_ver); b.BellmanFordEvaluation(source, A); scanner.close();
+Main b = new Main (num_ver);
+b.BellmanFordEvaluation(source, A);
+scanner.close();
 }
 }
