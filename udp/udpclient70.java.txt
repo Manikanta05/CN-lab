@@ -1,0 +1,34 @@
+//UDP CLIENT
+import java.util.Scanner; 
+import java.net.*;
+import java.io.*;
+public class udpclient70
+{
+public static void main(String[] args)
+{
+Scanner in = new Scanner(System.in); 
+DatagramSocket skt;
+try
+{
+skt = new DatagramSocket();
+InetAddress host = InetAddress.getByName("127.0.0.1"); 
+int port = 3000;
+while(true)
+{
+System.out.println("Client"); 
+String msg = in.nextLine(); 
+byte b[] = msg.getBytes();
+DatagramPacket req = new DatagramPacket(b,b.length,host,port); 
+skt.send(req);
+byte buffer[] = new byte[1024];
+DatagramPacket reply = new DatagramPacket(buffer, buffer.length); 
+skt.receive(reply);
+System.out.println("Server: "+new String(reply.getData()));
+}
+}
+catch(Exception e)
+{
+e.printStackTrace();
+}
+}
+}
