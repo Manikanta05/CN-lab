@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Leakybucket
+public class Main
 {
 public static void main(String[] args)
 {
