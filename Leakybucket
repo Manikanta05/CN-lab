@@ -7,9 +7,7 @@ int L, r, x1 = 0, x = 0, ta = 0, lct = 0, I=0;
 Scanner in = new Scanner(System.in);
 System.out.println("Enter Bucket size ");
 L = in.nextInt();
-
 System.out.println("Enter the Output rate ");
-
 r = in.nextInt();
 while(true)
 {
@@ -35,6 +33,7 @@ x1 = 0;
 x = x1 + I;
 lct = ta;
 System.out.println("Conformal packet");
+System.out.println("Remaining content of bucket:"+x);
 }
 else
 {
@@ -43,12 +42,12 @@ if(x1 + I <= L)
 x = x1 + I;
 lct = ta;
 System.out.println("Conformal packet");
+System.out.println("Remaining content of bucket:"+x);
 }
 else
 System.out.println("Non conformal packet");
-
-}
-
 }
 }
-} }
+}
+} 
+}
