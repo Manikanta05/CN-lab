@@ -1,7 +1,7 @@
 # CN-lab
 Cn lab programs
 
-#important links
+# important links
 
 https://releases.ubuntu.com/14.04/
 
